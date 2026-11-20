@@ -25,6 +25,9 @@ integer i;
 assign full  = (count == DEPTH);
 assign empty = (count == 0);
 
+wire wr_accept;
+wire rd_accept;
+
 // accepted operation based on status flags
 assign wr_accept = wr_en && !full;
 assign rd_accept = rd_en && !empty;

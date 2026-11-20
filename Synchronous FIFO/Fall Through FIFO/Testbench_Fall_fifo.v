@@ -46,10 +46,9 @@ FF_fifo     #(.DATA_WIDTH(DATA_WIDTH),.DEPTH(DEPTH))
                 $display ("Pass: Fifo is empty after reset");
 
             for (i=0; i<DEPTH; i=i+1) begin
-                @(posedge clk);// check
+                @(negedge clk);
                 w_data = i;
                 wr_en = 1;
-               // @(negedge clk);
             end
 
             wr_en = 0;

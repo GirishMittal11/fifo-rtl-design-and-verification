@@ -21,7 +21,7 @@ always @(posedge clk or negedge rst_n) begin
         wr_ptr <= 0;
     else if (wr_en && !full) begin
         mem[wr_ptr[ADDR_WIDTH-1:0]] <= w_data;
-        wr_ptr = wr_ptr + 1'b1;
+        wr_ptr <= wr_ptr + 1'b1;
     end
 end
 
@@ -32,7 +32,7 @@ always @(posedge clk or negedge rst_n) begin
     end
     else if (rd_en && !empty) begin
         r_data <= mem[rd_ptr[ADDR_WIDTH-1:0]];
-        rd_ptr = rd_ptr + 1'b1;
+        rd_ptr <= rd_ptr + 1'b1;
     end
 end
 

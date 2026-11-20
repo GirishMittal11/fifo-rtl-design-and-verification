@@ -10,7 +10,7 @@ module Testbench_Sync_Fifo;
     wire empty,full;
     wire  [DATA_WIDTH-1:0] r_data;
 
-    FF_fifo #(
+    sync_fifo #(
         .DATA_WIDTH(DATA_WIDTH),
         .DEPTH(DEPTH)
         ) dut(
