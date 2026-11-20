@@ -1,0 +1,15 @@
+# Compiled simulation files
+*.out
+*.vvp
+
+# Generated waveforms and logs
+*.vcd
+*.fst
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# VS Code workspace settings
+.vscode/
