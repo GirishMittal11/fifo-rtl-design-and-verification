@@ -134,9 +134,8 @@ gtkwave wave.vcd
 
 ## Verification status and limitations
 
-The author reports that all three testbenches compile and run successfully in Icarus Verilog after the RTL/testbench corrections. Re-run the commands above after any subsequent changes.
+The directed testbenches have been developed for execution using Icarus Verilog. Simulation should be rerun after any RTL or testbench modifications.
 
-These are directed RTL simulations. A successful simulation does **not** by itself establish:
 
 - formal verification of all possible input sequences;
 - CDC sign-off or quantified metastability reliability;
@@ -145,6 +144,3 @@ These are directed RTL simulations. A successful simulation does **not** by itse
 
 Those would require additional verification and implementation steps. No synthesis, timing, FPGA, ASIC, or silicon results are claimed in this repository.
 
-## Updating the project
-
-Generated simulation outputs such as `.out`, `.vvp`, `.vcd`, and `.fst` files should remain excluded from Git using `.gitignore`. Keep the RTL, testbenches, documentation, and any deliberately selected waveform screenshots in version control.
